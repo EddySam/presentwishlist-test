@@ -34,6 +34,17 @@ $(document).ready(function () {
 
 
     });
+    $(document).on('click','.navigation-menu',function (e){
 
+        e.preventDefault();
+        // $(".navigation-menu").parent().find('ul').removeClass('active');
+        $(this).parent().find("ul").toggleClass('active');
+
+    });
+    // $(".navigation-menu").click(function (e){
+    //     e.preventDefault();
+    //      $(".open-t ul").removeClass('active');
+    //      $(this).find("ul").addClass('active');
+    // });
 
 });

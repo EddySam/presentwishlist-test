@@ -30,8 +30,8 @@ body {
 
 }
 
-.sell-list .sell-list__inner .active {
-    display: block;
+ .active {
+    display: block!important;
 }
 
 .sell-list .added:hover {
@@ -413,6 +413,7 @@ button[type="submit"] {
     clear: both;
     content: "";
     padding-bottom: 20px;
+    margin-bottom:41px;
     position: relative;
 }
 
@@ -465,6 +466,7 @@ button[type="submit"] {
 
 .added-products__item-menu a:hover {
     text-decoration: none;
+    color: #d93655;
 }
 
 .type-off-product:hover .added-products__item-menu {
@@ -548,60 +550,64 @@ button[type="submit"] {
 .added-products__dropdown ul .dropdown-inside li:last-child{
     border: none;
 }
-.added-products__dropdown ul li:hover .dropdown-inside {
-    display: block;
-}
+
 /************************************************************************************************/
 /*******************************normalize drop down**********************************************/
 /************************************************************************************************/
-.Navigation{
+#navigation{
+    margin: 22px 0 0 150px;
+}
+.navigation{
     height: 50px;
     padding: 0;
     margin: 0;
     position: absolute;
+
 }
 
-.Navigation li 	{
+.navigation li 	{
     height: auto;
-    width: 150px;
+    width: 145px;
     float: left;
-    text-align: center;
     list-style: none;
-    font:12px "Bonveno", "Century Gothic";
     padding: 0;
     margin: 0;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    box-shadow: 0 1px 0 rgba(255,255,255, .9) inset, 0 1px 3px rgba(0,0,0, .1);
-    border-radius: 3px;
+    background-color: #f7f7f7 ;
+    border: 1px solid #d93655;
+    /*box-shadow: 0 1px 0 rgba(255,255,255, .9) inset, 0 1px 3px rgba(0,0,0, .1);*/
+    border-radius: 5px;
     margin-left:10px;
 }
 
-.Navigation a{
-    padding:13px;
+.navigation a{
+    padding:10px 10px 10px 10px;
     text-decoration: none;
-    color:#333;
-    text-shadow: 0 1px #fff;
+    color:#d93655;
+    /*text-shadow: 0 1px #fff;*/
     display: block;
+    background-color: #f7f7f7 ;
+    font:500 16px 'Ubuntu', sans-serif;
+
 }
-.Navigation li ul{
+.navigation li ul{
     display: none;
     height: auto;
     margin-left: -11px;
     padding: 0;
 }
-
-.Navigation li:hover ul{
-    display: block;
+.navigation-menu{
+    border-radius: 5px;
 }
+
 
 .navbar li ul li {
-    background-color:#eee;
-    border: 1px solid #ccc;
+    background-color:#f7f7f7;
+    border: 1px solid #d93655;
 }
 
-.Navigation li:hover, a:hover {
+.navigation li:hover, a:hover {
     background: #e8e8e8;
+    color:#d93655 ;
 }
 /************************************************************************************************/
 /*******************************normalize drop down**********************************************/
