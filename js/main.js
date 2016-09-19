@@ -24,6 +24,7 @@ $(document).ready(function () {
 
         var this_full_amazone = $(this).closest('.sell-list__add-to-list').find('p').clone();
         var this_products_menu = $(this).closest('.chose_presents').find('.added-products__item-menu').clone();
+        var this_dismis_block= $(this).closest('.main-content').find('.added-products__item-brought').clone();
         var new_el = $('<div class="type-off-product" />').prependTo('.added-products');
 
         new_el.append(this_full_img);
@@ -31,6 +32,7 @@ $(document).ready(function () {
         new_el.append(this_full_price);
         new_el.append(this_full_amazone);
         new_el.append(this_products_menu);
+        new_el.append(this_dismis_block);
 
 
     });
@@ -40,6 +42,11 @@ $(document).ready(function () {
         // $(".navigation-menu").parent().find('ul').removeClass('active');
         $(this).parent().find("ul").toggleClass('active');
 
+    });
+    $(document).on('click','.remove',function (e){
+        e.preventDefault();
+        $(".added-goods").removeClass('active');
+        $(this).closest('.main-content').find('.added-products__item-brought').addClass('active');
     });
     // $(".navigation-menu").click(function (e){
     //     e.preventDefault();

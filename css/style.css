@@ -555,7 +555,7 @@ button[type="submit"] {
 /*******************************normalize drop down**********************************************/
 /************************************************************************************************/
 #navigation{
-    margin: 22px 0 0 150px;
+    margin: 21px 0 0 150px;
 }
 .navigation{
     height: 50px;
@@ -580,7 +580,7 @@ button[type="submit"] {
 }
 
 .navigation a{
-    padding:10px 10px 10px 10px;
+    padding:11px 10px 11px 10px;
     text-decoration: none;
     color:#d93655;
     /*text-shadow: 0 1px #fff;*/
