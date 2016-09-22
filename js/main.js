@@ -7,8 +7,8 @@ $(document).ready(function () {
         var data = $(this).closest('.sell-list__inner').attr('data-id');
 
 
-        //if($('.type-off-product[data-id="'+data+'"]').length() > 0) {
-        if (data == tip_id) {
+        if($('.type-off-product[data-id="'+data+'"]').length > 0) {
+        //if (data == tip_id) {
 
             $(this).closest('.chose_presents').find(' [data-id="'+data+'"]  .added-products__item-brought').remove();
             $(this).closest('.sell-list__inner').find(".added-goods").addClass('active');
