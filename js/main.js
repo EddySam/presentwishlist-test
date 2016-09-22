@@ -10,10 +10,6 @@ $(document).ready(function () {
         //if($('.type-off-product[data-id="'+data+'"]').length() > 0) {
         if (data == tip_id) {
 
-
-            //tip_id.find('.added-products__item-brought').remove();
-            // $('.sell-list__inner[data-id="' + data_brought + '"] .added-goods').addClass('active');
-            // $('.sell-list__inner[data-id="' + data_brought + '"]').closest('.sell-list__item').addClass('added');
             $(this).closest('.chose_presents').find(' [data-id="'+data+'"]  .added-products__item-brought').remove();
             $(this).closest('.sell-list__inner').find(".added-goods").addClass('active');
             $(this).closest('.sell-list__item').addClass('added');
