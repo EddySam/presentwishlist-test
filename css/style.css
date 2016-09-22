@@ -473,6 +473,7 @@ button[type="submit"] {
     display: block;
     width: 100%;
     height: 95%;
+    z-index:1111;
 }
 
 .added-products__item-menu__view-item {
@@ -605,7 +606,7 @@ button[type="submit"] {
     border: 1px solid #d93655;
 }
 
-.navigation li:hover, a:hover {
+.navigation li:hover,.navigation a:hover {
     background: #e8e8e8;
     color:#d93655 ;
 }
