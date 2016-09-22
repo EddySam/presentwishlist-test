@@ -3,16 +3,22 @@ $(document).ready(function () {
 
     $(".add-to-list-btn").click(function (e) {
         e.preventDefault();
-        if ($(this).closest('.sell-list__inner').attr('data-id')==$(this).closest('.chose_presents').find('.type-off-product').attr('data-id') ){
+        var tip_id = $(this).closest('.chose_presents').find('.type-off-product').attr('data-id');
+        var data = $(this).closest('.sell-list__inner').attr('data-id');
 
-                e.preventDefault();
-                var data_brought = $(this).closest('.type-off-product').attr('data-id');
-                $(this).closest('.type-off-product').find('.added-products__item-brought').remove();
-                $('.sell-list__inner[data-id="' + data_brought + '"] .added-goods').addClass('active');
-                $('.sell-list__inner[data-id="' + data_brought + '"]').closest('.sell-list__item').addClass('added');
 
+        //if($('.type-off-product[data-id="'+data+'"]').length() > 0) {
+        if (data == tip_id) {
+
+
+            //tip_id.find('.added-products__item-brought').remove();
+            // $('.sell-list__inner[data-id="' + data_brought + '"] .added-goods').addClass('active');
+            // $('.sell-list__inner[data-id="' + data_brought + '"]').closest('.sell-list__item').addClass('added');
+            $(this).closest('.chose_presents').find(' [data-id="'+data+'"]  .added-products__item-brought').remove();
+            $(this).closest('.sell-list__inner').find(".added-goods").addClass('active');
+            $(this).closest('.sell-list__item').addClass('added');
         }
-        else{
+        else {
             $(".add-to-list-btn").removeClass('active');
 
             $(this).closest('.sell-list__inner').find(".added-goods").addClass('active');
@@ -25,7 +31,6 @@ $(document).ready(function () {
             //thi add block with content to added-products
             $('.added-products').append('<div class="type-off-product" />');
 
-            var data = $(this).closest('.sell-list__inner').attr('data-id');
 
             var this_parent = $(this).closest('.sell-list__inner');
 
@@ -72,7 +77,7 @@ $(document).ready(function () {
     $(document).on('click', '.refresh', function (e) {
         e.preventDefault();
         var data_brought = $(this).closest('.type-off-product').attr('data-id');
-         $(this).closest('.type-off-product').find('.added-products__item-brought').remove();
+        $(this).closest('.type-off-product').find('.added-products__item-brought').remove();
         $('.sell-list__inner[data-id="' + data_brought + '"] .added-goods').addClass('active');
         $('.sell-list__inner[data-id="' + data_brought + '"]').closest('.sell-list__item').addClass('added');
     });
