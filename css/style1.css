@@ -26,11 +26,12 @@
 }
 
 body {
-   background: url("../img/bg-present.png");
+    background: url("../img/bg-head.png");
+
 }
 
-.active {
-    display: block !important;
+ .active {
+    display: block!important;
 }
 
 .sell-list .added:hover {
@@ -48,11 +49,6 @@ body {
 }
 
 /*header start*/
-header {
-    background: url("../img/bg-head.png");
-    width: 100%;
-}
-
 header a {
     font-family: 'Signika', sans-serif;
 }
@@ -100,21 +96,16 @@ nav {
 
 nav li {
     margin-left: 42px;
-
 }
 
-.list-inline li {
-    text-transform: uppercase;
-}
-
-nav li a, .menu-foot_menu-container ul li a {
+nav li a {
     color: #1b75ba;
     font-weight: 600;
     font-size: 18px;
     text-decoration: none;
 }
 
-nav li a:hover, .menu-foot_menu-container ul li a:hover {
+nav li a:hover {
     text-decoration: none;
 }
 
@@ -123,7 +114,8 @@ nav li a:hover, .menu-foot_menu-container ul li a:hover {
 /* This is section chose present beginning */
 
 .chose_presents {
-
+    background: url("../img/bg-present.png") no-repeat;
+    background-size: cover;
     width: 100%;
     padding-top: 40px;
     padding-bottom: 200px;
@@ -140,9 +132,12 @@ nav li a:hover, .menu-foot_menu-container ul li a:hover {
 }
 
 .present-form h2 {
-    font: 300 50px 'Signika', sans-serif;
+    font:300 50px 'Signika', sans-serif;
+
     color: #d93655;
-    margin: 4px 6px 17px 0;
+    margin: 4px 6px 30px 0;
+    word-spacing: 6px;
+
 }
 
 .back-btn {
@@ -182,10 +177,6 @@ nav li a:hover, .menu-foot_menu-container ul li a:hover {
     margin: 0;
 }
 
-.add-too-list img {
-    max-width: 100%;
-}
-
 /* search start*/
 
 .searchbox {
@@ -196,10 +187,6 @@ nav li a:hover, .menu-foot_menu-container ul li a:hover {
     box-sizing: border-box;
     border-radius: 6px;
     margin-bottom: 15px;
-}
-
-.searchbox input[type="search"] {
-    font-size: 20px;
 }
 
 #search-form {
@@ -225,7 +212,6 @@ button[type="submit"] {
     background-position: 10px 5px;
     background-color: transparent;
     background-size: 23px 23px;
-    box-shadow: none;
     border: none;
     cursor: pointer;
 }
@@ -264,9 +250,9 @@ button[type="submit"] {
 }
 
 .full-text {
-    /*text-overflow: ellipsis;*/
-    /*overflow: hidden;*/
-    /*white-space: nowrap;*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     font-size: 14px;
     font-weight: 300;
     max-width: 150px;
@@ -282,7 +268,6 @@ button[type="submit"] {
 }
 
 .sell-list__item {
-    max-width: 172px;
     height: 235px;
     overflow: hidden;
     padding: 0;
@@ -317,11 +302,8 @@ button[type="submit"] {
     background: url("../img/bg-head.png");
     opacity: 0.9;
     content: "";
-    display: block;
 }
-.nohover .sell-list__item:before{
-    opacity: 0!important;
-}
+
 .sell-list .sell-list__item:hover:before {
     display: none;
     z-index: 666;
@@ -362,14 +344,15 @@ button[type="submit"] {
 }
 
 .name-take {
-    background: url("../img/name-take.png");
+    background: url("../img/name-take.png") no-repeat;
+    background-size: cover;
     border: 1px solid #32638b;
     border-radius: 5px 5px 0 0;
 }
 
 .name-take h3 {
     margin: 0;
-    padding: 18px 0 16px;
+    padding: 18px 0;
     color: #fff;
     font: 18px "MyriadProRegular", sans-serif;
 }
@@ -378,7 +361,6 @@ button[type="submit"] {
     margin-right: -15px;
     height: 550px;
     overflow-y: scroll;
-    overflow-x: hidden;
 }
 
 .sum-describe {
@@ -395,49 +377,33 @@ button[type="submit"] {
     background-size: cover;
     height: 800px;
     box-sizing: border-box;
-    padding: 20px 0 95px 0;
+    padding: 20px 25px 95px 12px;
 }
 
 .name-take .show, .name-take .pancil {
-    border: 1px solid #033357;
-    border-radius: 3px;
-    margin: 6px 6px 0 6px;
-}
-
-.name-take .show {
-    padding: 7px 9px;
-}
-
-.name-take .pancil {
-    padding: 9px 9px;
+    width: 36px;
+    height: 36px;
+    margin: 6px 6px 0 8px;
 }
 
 .added-products .full-text {
     max-width: 200px;
 }
 
-.sum-describe {
-    padding: 0 25px 0 12px;
-}
-
 .sum-describe p {
     font: 18px 'Pacifico', cursive;
     padding: 6px 0px 0 0;
+    margin: 0 0 0 118px;
     line-height: 27px;
     color: #464545;
-    margin: 0;
-}
-.sum-describe__parent {
-     position: absolute;max-width: 200px;margin: 0 0 0 118px;z-index: 55;background: rgba(255,255,255, 0.5);
- }
-.sum-describe__text__add{
-  display: none;
 
 }
+
 .sum-describe a {
     font: 12px 'Ubuntu', sans-serif;
     text-decoration: underline;
     color: #a3acb3;
+
 }
 
 /* end block with added product*/
@@ -447,7 +413,7 @@ button[type="submit"] {
     clear: both;
     content: "";
     padding-bottom: 20px;
-    margin-bottom: 41px;
+    margin-bottom:41px;
     position: relative;
 }
 
@@ -471,8 +437,6 @@ button[type="submit"] {
 
 .added-products {
     position: relative;
-    padding: 0 0 0 12px;
-    margin-right: 15px;
 }
 
 .present-form-add__empty {
@@ -509,22 +473,21 @@ button[type="submit"] {
     display: block;
     width: 100%;
     height: 95%;
-    z-index: 1111;
+    z-index:1111;
 }
 
 .added-products__item-menu__view-item {
     float: left;
-    margin: 25px 0 0 32px;
+    margin: 22px 0 0 32px;
 }
 
 .added-products__item-menu__view-item button {
     background-color: #f7f7f7;
     border-radius: 5px;
     color: #d93655;
-    padding: 11px 12px 11px 10px;
+    padding: 10px 12px 10px 10px;
     text-decoration: none;
     font: 16px 'Ubuntu', sans-serif;
-    border: none;
 }
 
 .added-products__item-menu__view-item button i {
@@ -542,11 +505,9 @@ button[type="submit"] {
     margin: 0;
     border: 1px solid #d93655;
 }
-
-.icon-caret-down {
+.icon-caret-down{
     margin-left: 7px;
 }
-
 .added-products__dropdown ul {
     list-style-type: none;
     background: #f7f7f7;
@@ -558,7 +519,7 @@ button[type="submit"] {
 }
 
 .added-products__dropdown .dropdown-top a {
-    font: 500 16px 'Ubuntu', sans-serif;
+    font:500 16px 'Ubuntu', sans-serif;
     color: #d93655;
 }
 
@@ -587,27 +548,17 @@ button[type="submit"] {
     padding: 10px;
     border-bottom: 1px solid #d93655;
 }
-
-.added-products__dropdown ul .dropdown-inside li:last-child {
+.added-products__dropdown ul .dropdown-inside li:last-child{
     border: none;
 }
 
-/*****************************************    CLIP   *******************************************************/
-.clip {
-    position: absolute;
-    z-index: 99999;
-    top: 23px;
-    left: -13px;
-}
-
-/****************************************** END  CLIP ******************************************************/
+/************************************************************************************************/
 /*******************************normalize drop down**********************************************/
 /************************************************************************************************/
-#navigation {
-    margin: 24px 0 0 150px;
+#navigation{
+    margin: 21px 0 0 150px;
 }
-
-.navigation {
+.navigation{
     height: 50px;
     padding: 0;
     margin: 0;
@@ -615,56 +566,50 @@ button[type="submit"] {
 
 }
 
-.navigation li {
+.navigation li 	{
     height: auto;
     width: 145px;
     float: left;
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #f7f7f7;
+    background-color: #f7f7f7 ;
     border: 1px solid #d93655;
     /*box-shadow: 0 1px 0 rgba(255,255,255, .9) inset, 0 1px 3px rgba(0,0,0, .1);*/
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left:10px;
 }
 
-.navigation li ul li a img {
-    padding-right: 3px;
-}
-
-.navigation a {
-    padding: 11px 9px;
+.navigation a{
+    padding:11px 10px 11px 10px;
     text-decoration: none;
-    color: #d93655;
+    color:#d93655;
     /*text-shadow: 0 1px #fff;*/
     display: block;
-    background-color: #f7f7f7;
-    font: 500 16px 'Ubuntu', sans-serif;
+    background-color: #f7f7f7 ;
+    font:500 16px 'Ubuntu', sans-serif;
 
 }
-
-.navigation li ul {
+.navigation li ul{
     display: none;
     height: auto;
     margin-left: -11px;
     padding: 0;
 }
-
-.navigation-menu {
+.navigation-menu{
     border-radius: 5px;
 }
 
+
 .navbar li ul li {
-    background-color: #f7f7f7;
+    background-color:#f7f7f7;
     border: 1px solid #d93655;
 }
 
-.navigation li:hover, .navigation a:hover {
+.navigation li:hover,.navigation a:hover {
     background: #e8e8e8;
-    color: #d93655;
+    color:#d93655 ;
 }
-
 /************************************************************************************************/
 /*******************************normalize drop down**********************************************/
 /************************************************************************************************/
@@ -680,7 +625,7 @@ button[type="submit"] {
 }
 
 .type-off-product .added-products__item-brought p {
-    margin: 21px 43px;
+    margin: 21px 46px;
     padding: 10px;
     background: #fff;
     border-radius: 5px;
@@ -705,7 +650,7 @@ button[type="submit"] {
     left: 3.5%;
     top: 12.5%;
     font: 700 30px 'Ubuntu', sans-serif;
-    padding: 4% 20%;
+    padding: 15px 70px;
     border: 2px solid #033357;
     border-radius: 3px;
 }
@@ -721,53 +666,7 @@ button[type="submit"] {
 /*-----------------------   FOOTER    --------------------------*/
 
 footer {
-    padding: 25px 0;
-    background: url("../img/bg-head.png");
-}
-
-footer .social {
-    padding: 0 0 25px 0;
-}
-
-footer #menu-foot_menu li a {
-    font-size: 14px;
-}
-
-footer #menu-foot_menu li {
-    padding: 0 11px;
+    padding: 45px 0;
 }
 
 /*-----------------------  FOOTER END --------------------------*/
-
-/*--------------------------media optimiz--------------------------------*/
-@media screen and (max-width: 980px) {
-    .present-form-add {
-        float: none;
-        width: 360px;
-        margin: 25px auto
-    }
-    .present-form{
-        float: none;
-        margin: auto;
-        width: 570px;
-    }
-}
-@media screen and (max-width: 850px){
-    
-}
-@media screen and (max-width: 700px){
-    .present-form{
-        width: 100%;
-    }
-}
-/*--------------------------end media optimiz--------------------------------*/
-/*scrol*/
-.nicescroll-cursors{
-    width: auto;
-}
- #ascrail2000{
-    border-radius: 5px;
-     width: auto!important;
-}
-
-/*end scrol*/

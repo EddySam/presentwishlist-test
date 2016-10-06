@@ -1,12 +1,5 @@
 $(document).ready(function () {
 
-    $('.chose_presents .sell-list, .added-products ').niceScroll({
-        cursorcolor: '#8c8c8c',
-        cursorwidth: '8px',
-        cursoropacitymin: '0.7',
-        background: '#d7d7d7'
-    });
-
 
     $(".add-to-list-btn").click(function (e) {
         e.preventDefault();
@@ -41,9 +34,7 @@ $(document).ready(function () {
             var this_full_price = this_parent.find('.price').clone().addClass('added-product__price').prepend("Best Price: ");
             var this_full_amazone = $(this).closest('.sell-list__add-to-list').find('p').clone();
             var this_products_menu = $(this).closest('.chose_presents').find('.added-products__dop .added-products__item-menu').clone();
-            var this_products_clip = $(this).closest('.chose_presents').find('.added-products__dop .clip').clone().removeClass('no-active').addClass('activ');
             var this_dismis_block = $(this).closest('.main-content').find('.added-products__item-brought').clone();
-
             var new_el = $('<div class="type-off-product" data-id=' + data + '/> ').prependTo('.added-products');
 
             new_el.append(this_full_img);
@@ -52,7 +43,7 @@ $(document).ready(function () {
             new_el.append(this_full_amazone);
             new_el.append(this_products_menu);
             new_el.append(this_dismis_block);
-            new_el.append(this_products_clip);
+
 
         }
 
@@ -84,38 +75,5 @@ $(document).ready(function () {
         $('.sell-list__inner[data-id="' + data_brought + '"]').closest('.sell-list__item').addClass('added');
     });
 
-    var size = 100,
-        newsContent = $('.sum-describe__text'),
-        newsText = newsContent.text();
 
-    if (newsText.length > size) {
-        newsContent.html(newsText.slice(0, size) + '<span class="none_end"> ...</span>' + '<span class="sum-describe__text__add">' + newsText.slice(size) + '</span>');
-    }
-
-    $(".read-more").click(function (e) {
-        e.preventDefault();
-        $(this).toggleClass('read-more_poth');
-        $('.sum-describe__text__add').toggleClass('active');
-        $('.none_end').toggleClass('no-active');
-    });
-    $(".added-goods").hover(
-        function () {
-            $('.sell-list__product').toggleClass('nohover');
-        }
-    );
-    var sizetwo = 40,
-        newsContenttwo = $('.full-text'),
-        newsTexttwo = newsContenttwo.text();
-
-    if (newsTexttwo.length > sizetwo) {
-        newsContenttwo.html(newsTexttwo.slice(0, sizetwo) + '<span class="none_end_two "> ...</span>' + '<span class="full-text-two no-active">' + newsTexttwo.slice(sizetwo) + '</span>');
-    }
-
-    $(".sell-list__item").hover(
-        function () {
-            $('.none_end_two').toggleClass('no-active');
-            $('.full-text-two').toggleClass('no-active');
-
-        }
-    );
 });
