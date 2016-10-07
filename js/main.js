@@ -1,5 +1,7 @@
 $(document).ready(function () {
-
+    $('.navbar-toggle') .on('click',function(){
+        $('.collapse').toggleClass('show');
+    });
     $('.chose_presents .sell-list, .added-products ').niceScroll({
         cursorcolor: '#8c8c8c',
         cursorwidth: '8px',
@@ -7,7 +9,9 @@ $(document).ready(function () {
         background: '#d7d7d7'
     });
 
-
+$('.align-justify').click(function () {
+$('header nav ul').toggleClass('active')
+});
     $(".add-to-list-btn").click(function (e) {
         e.preventDefault();
         var tip_id = $(this).closest('.chose_presents').find('.type-off-product').attr('data-id');
@@ -36,7 +40,7 @@ $(document).ready(function () {
 
 
             var this_parent = $(this).closest('.sell-list__inner');
-            var this_full_text = this_parent.find('.full-text').clone().addClass('full-text-added');
+            var this_full_text = this_parent.find('.full-text').clone().addClass('full-text-added').removeClass('full-text');
             var this_full_img = this_parent.find('.add-too-list img').clone().addClass('added-product__img');
             var this_full_price = this_parent.find('.price').clone().addClass('added-product__price').prepend("Best Price: ");
             var this_full_amazone = $(this).closest('.sell-list__add-to-list').find('p').clone();
@@ -84,7 +88,7 @@ $(document).ready(function () {
         $('.sell-list__inner[data-id="' + data_brought + '"]').closest('.sell-list__item').addClass('added');
     });
 
-    var size = 100,
+    var size = 105,
         newsContent = $('.sum-describe__text'),
         newsText = newsContent.text();
 
@@ -103,14 +107,16 @@ $(document).ready(function () {
             $('.sell-list__product').toggleClass('nohover');
         }
     );
+
     var sizetwo = 40,
-        newsContenttwo = $('.full-text'),
-        newsTexttwo = newsContenttwo.text();
+        newsContenttwo = $('.sell-list__product .full-text');
 
-    if (newsTexttwo.length > sizetwo) {
-        newsContenttwo.html(newsTexttwo.slice(0, sizetwo) + '<span class="none_end_two "> ...</span>' + '<span class="full-text-two no-active">' + newsTexttwo.slice(sizetwo) + '</span>');
-    }
-
+    newsContenttwo.each(function () {
+        var this_text = $(this).text();
+        if (this_text.length > sizetwo) {
+            $(this).html(this_text.slice(0, sizetwo) + '<span class="none_end_two "> ...</span>' + '<span class="full-text-two no-active">' + this_text.slice(sizetwo) + '</span>');
+        }
+    });
     $(".sell-list__item").hover(
         function () {
             $('.none_end_two').toggleClass('no-active');

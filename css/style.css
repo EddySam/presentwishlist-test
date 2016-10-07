@@ -26,7 +26,8 @@
 }
 
 body {
-   background: url("../img/bg-present.png");
+    background: url("../img/bg-present.png") no-repeat;
+    background-size: cover;
 }
 
 .active {
@@ -38,7 +39,7 @@ body {
 }
 
 .no-active {
-    display: none;
+    display: none!important;
 !important;
 }
 
@@ -63,10 +64,12 @@ header a {
 
 /*LOGIN*/
 .regist {
+    width: 180px;
     background: #1b75ba;
-    padding: 4px 7px;
+    padding: 4px 5px 4px 11px;
     border: 1px solid #589acc;
     border-radius: 0 0 5px 5px;
+
 }
 
 .regist a {
@@ -78,31 +81,39 @@ header a {
 }
 
 .regist a:first-child {
-    padding-right: 10px;
-    margin-right: 10px;
+    padding-right: 9px;
+    margin-right: 6px;
     border-right: 1px solid #1d659c;
 }
 
 .regist a img {
-    padding-right: 5px;
+    padding-right: 6px;
     padding-bottom: 4px;
 }
 
 /*LOGIN END*/
-
+/*--------Navigation header-----*/
 nav {
     float: right;
     clear: both;
     content: "";
-    margin-top: 30px;
+    margin-top: 35px;
     padding-right: 5px;
 }
 
-nav li {
-    margin-left: 42px;
-
+.navbar {
+    clear: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
+nav .list-inline li {
+    margin-left: 32px;
+}
+nav .list-inline li:nth-child(2) {
+    margin-left: 52px;
+}
 .list-inline li {
     text-transform: uppercase;
 }
@@ -117,7 +128,9 @@ nav li a, .menu-foot_menu-container ul li a {
 nav li a:hover, .menu-foot_menu-container ul li a:hover {
     text-decoration: none;
 }
-
+.align-justify{
+    display:none;
+}
 /*header end*/
 
 /* This is section chose present beginning */
@@ -130,11 +143,11 @@ nav li a:hover, .menu-foot_menu-container ul li a:hover {
 }
 
 .present-form {
-    width: 59.5%;
+    width: 572px;
     float: left;
     background: url("../img/bg-head.png");
     box-sizing: border-box;
-    padding: 30px;
+    padding: 30px 30px 5px 30px;
     border-radius: 5px;
 
 }
@@ -142,7 +155,7 @@ nav li a:hover, .menu-foot_menu-container ul li a:hover {
 .present-form h2 {
     font: 300 50px 'Signika', sans-serif;
     color: #d93655;
-    margin: 4px 6px 17px 0;
+    margin: -4px 5px 15px 0;
 }
 
 .back-btn {
@@ -150,7 +163,8 @@ nav li a:hover, .menu-foot_menu-container ul li a:hover {
     color: #fff;
     font: 600 16px 'Signika', sans-serif;
     padding: 2px 10px;
-    border-radius: 4px;
+    border-radius: 3px;
+    margin-left: 5px;
 
 }
 
@@ -164,17 +178,18 @@ nav li a:hover, .menu-foot_menu-container ul li a:hover {
 }
 
 .step-namb {
-    font: 20px "MyriadProRegular";
+    font: 20px "MyriadProRegular", sans-serif;
     color: #9f9e9e;
     border-bottom: 1px solid #eaeaea;
-    margin-right: 85px;
+    margin-right: 81px;
 }
 
 .search-info {
-    padding: 20px 0 25px;
-    font: 16px "MyriadProRegular";
+    padding: 20px 0 23px;
+    font: 17px "MyriadProRegular", sans-serif;
     color: #8f8f8f;
     margin: 0;
+    word-spacing: 1px;
 }
 
 .add-too-list p {
@@ -192,10 +207,9 @@ nav li a:hover, .menu-foot_menu-container ul li a:hover {
     background-color: #eaeaea;
     padding: 5px;
     width: 100%;
-    margin: auto;
+    margin: 0 auto 15px;
     box-sizing: border-box;
     border-radius: 6px;
-    margin-bottom: 15px;
 }
 
 .searchbox input[type="search"] {
@@ -236,7 +250,7 @@ button[type="submit"] {
 
 .chose_presents .sell-list {
     margin: 0 -26px 0 -30px;
-    height: 650px;
+    height: 677px;
     overflow-y: scroll;
     overflow-x: visible;
     font-family: 'Signika', sans-serif;
@@ -263,7 +277,7 @@ button[type="submit"] {
     display: none;
 }
 
-.full-text {
+.sell-list__item .full-text {
     /*text-overflow: ellipsis;*/
     /*overflow: hidden;*/
     /*white-space: nowrap;*/
@@ -319,9 +333,11 @@ button[type="submit"] {
     content: "";
     display: block;
 }
-.nohover .sell-list__item:before{
-    opacity: 0!important;
+
+.nohover .sell-list__item:before {
+    opacity: 0 !important;
 }
+
 .sell-list .sell-list__item:hover:before {
     display: none;
     z-index: 666;
@@ -351,7 +367,9 @@ button[type="submit"] {
     border-radius: 5px;
 
 }
-
+.present-form__discr_prices{
+    margin: 13px 0 20px;
+}
 /*sell-list  end*/
 
 /* start block with added product*/
@@ -371,7 +389,8 @@ button[type="submit"] {
     margin: 0;
     padding: 18px 0 16px;
     color: #fff;
-    font: 18px "MyriadProRegular", sans-serif;
+    font: 18px "Ubuntu", sans-serif;
+    word-spacing: 5px;
 }
 
 .added-products {
@@ -381,19 +400,14 @@ button[type="submit"] {
     overflow-x: hidden;
 }
 
-.sum-describe {
-    height: 135px;
-}
-
 .sum-describe img {
     float: left;
     padding-right: 15px;
 }
-
 .main-content {
     background: url("../img/bg-add-too-list.png") no-repeat;
     background-size: cover;
-    height: 800px;
+    height: 808px;
     box-sizing: border-box;
     padding: 20px 0 95px 0;
 }
@@ -417,23 +431,31 @@ button[type="submit"] {
 }
 
 .sum-describe {
-    padding: 0 25px 0 12px;
+    padding: 6px 25px 0 10px;
+    height: 135px;
 }
 
 .sum-describe p {
     font: 18px 'Pacifico', cursive;
-    padding: 6px 0px 0 0;
-    line-height: 27px;
+    padding: 9px 0px 0 0;
     color: #464545;
     margin: 0;
+    line-height: 25px!important;
 }
+
 .sum-describe__parent {
-     position: absolute;max-width: 200px;margin: 0 0 0 118px;z-index: 55;background: rgba(255,255,255, 0.5);
- }
-.sum-describe__text__add{
-  display: none;
+    position: absolute;
+    max-width: 200px;
+    margin: 0 0 0 118px;
+    z-index: 55;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.sum-describe__text__add {
+    display: none;
 
 }
+
 .sum-describe a {
     font: 12px 'Ubuntu', sans-serif;
     text-decoration: underline;
@@ -464,14 +486,17 @@ button[type="submit"] {
 }
 
 .full-text-added {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     font: 20px 'Pacifico', cursive;
     color: #1b75ba;
-    text-overflow: ellipsis;
+    max-width: 210px;
 }
 
 .added-products {
     position: relative;
-    padding: 0 0 0 12px;
+    padding: 23px 0 0 12px;
     margin-right: 15px;
 }
 
@@ -507,21 +532,21 @@ button[type="submit"] {
 
 .type-off-product:hover .added-products__item-menu {
     display: block;
-    width: 100%;
-    height: 95%;
+    width: 97%;
+    height: 92%;
     z-index: 1111;
 }
 
 .added-products__item-menu__view-item {
     float: left;
-    margin: 25px 0 0 32px;
+    margin: 23px 0 0 32px;
 }
 
 .added-products__item-menu__view-item button {
     background-color: #f7f7f7;
     border-radius: 5px;
     color: #d93655;
-    padding: 11px 12px 11px 10px;
+    padding: 11px 15px 11px 10px;
     text-decoration: none;
     font: 16px 'Ubuntu', sans-serif;
     border: none;
@@ -604,7 +629,7 @@ button[type="submit"] {
 /*******************************normalize drop down**********************************************/
 /************************************************************************************************/
 #navigation {
-    margin: 24px 0 0 150px;
+    margin: 22px 0 0 156px;
 }
 
 .navigation {
@@ -721,19 +746,19 @@ button[type="submit"] {
 /*-----------------------   FOOTER    --------------------------*/
 
 footer {
-    padding: 25px 0;
+    padding: 52px 0 25px 0;
     background: url("../img/bg-head.png");
 }
 
 footer .social {
-    padding: 0 0 25px 0;
+    margin: 9px 0 47px;
 }
 
-footer #menu-foot_menu li a {
+footer .foot_menu li a {
     font-size: 14px;
 }
 
-footer #menu-foot_menu li {
+footer .foot_menu  li {
     padding: 0 11px;
 }
 
@@ -746,28 +771,82 @@ footer #menu-foot_menu li {
         width: 360px;
         margin: 25px auto
     }
-    .present-form{
+
+    .present-form {
         float: none;
         margin: auto;
-        width: 570px;
+        width: 580px;
+    }
+
+    .logo {
+        display: block;
+    }
+    nav .list-inline li:nth-child(2){
+        margin: auto;
+    }
+    .regist {
+        margin: auto;
+        float: none !important;
+        border-radius: 5px;
+    }
+    .align-justify{
+        display: block;
+        margin: auto;
+    }
+    nav{
+        float: none;
+        text-align: center;
+
+    }
+    nav ul{
+        display: none;
+    }
+    nav .list-inline li{
+        margin: 15px 0;
+        display: block!important;
     }
 }
-@media screen and (max-width: 850px){
-    
+
+@media screen and (max-width: 850px) {
+
 }
-@media screen and (max-width: 700px){
-    .present-form{
-        width: 100%;
+
+@media screen and (max-width: 700px) {
+    .present-form {
+        width: 580px;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 620px){
+    .present-form {
+        width: 430px;
+    }
+    #search-form{
+        width: 82%;
+    }
+}
+@media screen and (max-width: 475px){
+    .present-form {
+        width: 95%;
+    }
+    body{
+        padding: 0!important;
+    }
+    .save a{
+        padding: 4% 18%;
+    }
+    .present-form-add{
+        width: 95%;
     }
 }
 /*--------------------------end media optimiz--------------------------------*/
 /*scrol*/
-.nicescroll-cursors{
+.nicescroll-cursors {
     width: auto;
 }
- #ascrail2000{
+
+#ascrail2000 {
     border-radius: 5px;
-     width: auto!important;
+    width: auto !important;
 }
 
 /*end scrol*/
