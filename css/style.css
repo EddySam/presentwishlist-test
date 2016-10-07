@@ -838,6 +838,13 @@ footer .foot_menu  li {
         width: 95%;
     }
 }
+@media screen and (max-width: 447px){
+    .sell-list__item{
+        float: none;
+        margin: 0 auto;
+    }
+}
+
 /*--------------------------end media optimiz--------------------------------*/
 /*scrol*/
 .nicescroll-cursors {
