@@ -834,9 +834,7 @@ footer .foot_menu  li {
     .save a{
         padding: 4% 18%;
     }
-    .present-form-add{
-        width: 95%;
-    }
+
 }
 @media screen and (max-width: 447px){
     .sell-list__item{
@@ -844,7 +842,12 @@ footer .foot_menu  li {
         margin: 0 auto;
     }
 }
-
+@-moz-document url-prefix()
+{
+    .regist{
+        width: 185px;
+    }
+}
 /*--------------------------end media optimiz--------------------------------*/
 /*scrol*/
 .nicescroll-cursors {
