@@ -385,7 +385,9 @@ button[type="submit"] {
     border: 1px solid #32638b;
     border-radius: 5px 5px 0 0;
 }
-
+.name-take a:hover{
+    background: #0e4a82;
+}
 .name-take h3 {
     margin: 0;
     padding: 18px 0 16px;
@@ -734,11 +736,13 @@ button[type="submit"] {
     padding: 4% 20%;
     border: 2px solid #033357;
     border-radius: 3px;
+
 }
 
 .save a:hover {
-    color: #8a6d3b;
+    background:#0e4a82;
     text-decoration: none;
+    color: #fff;
 }
 
 /*------SAVE   END-------*/
@@ -754,7 +758,9 @@ footer {
 footer .social {
     margin: 9px 0 47px;
 }
-
+footer .social li:hover{
+    opacity: 0.7;
+}
 footer .foot_menu li a {
     font-size: 14px;
 }
