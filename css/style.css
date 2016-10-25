@@ -217,6 +217,7 @@ nav li a:hover, .menu-foot_menu-container ul li a:hover {
 }
 
 #search-form {
+    box-shadow: none;
     width: 87%;
     margin: 0;
     padding: 10px;
