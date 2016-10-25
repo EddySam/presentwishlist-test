@@ -402,10 +402,17 @@ button[type="submit"] {
     overflow-y: scroll;
     overflow-x: hidden;
 }
-
+.sum-describe{
+    position: relative;
+}
 .sum-describe img {
     float: left;
     padding-right: 15px;
+}
+.sum-describe .layer{
+    position: absolute;
+    top: 36px;
+    left: -2px;
 }
 .main-content {
     background: url("../img/bg-add-too-list.png") no-repeat;
@@ -795,10 +802,18 @@ footer .foot_menu  li {
         margin: auto;
         float: none !important;
         border-radius: 5px;
+        width: 215px;
+        position: relative;
     }
     .align-justify{
         display: block;
         margin: auto;
+        position: absolute;
+        top: 3px;
+        right: 4px;
+        border: none;
+        background: none;
+        color: #fff;
     }
     nav{
         float: none;
