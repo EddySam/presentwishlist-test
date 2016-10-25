@@ -186,10 +186,11 @@ nav li a:hover, .menu-foot_menu-container ul li a:hover {
 
 .search-info {
     padding: 20px 0 23px;
-    font: 17px "MyriadProRegular", sans-serif;
+    font: 17px "Ubuntu", sans-serif;
     color: #8f8f8f;
     margin: 0;
     word-spacing: 1px;
+    line-height: 18px;
 }
 
 .add-too-list p {
